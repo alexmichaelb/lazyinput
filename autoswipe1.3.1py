@@ -80,7 +80,7 @@ def optimalswiperr():
             keyboard.release(Key.left)
             print("Session dislike", x,"Definitely not a bot! ;)")
             x=x+1
-            time.sleep(restfloat)
+            time.sleep(sleepfloat)
             dislike=randint(4,6)
 
         ##like
