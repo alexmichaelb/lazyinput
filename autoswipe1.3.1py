@@ -36,16 +36,17 @@ def calmswiperr():
         elif n%dislike==0:
             keyboard.press(Key.left)
             keyboard.release(Key.left)
-            print("Session dislike", m,"Definitely not a bot! ;)")
+            print("Dislike, session action", n ,"Definitely not a bot! ;)")
             m=m+1
             time.sleep(restfloat)
             dislike=randint(4,6)
+            n=n+1
 
         ##like
         else:
             keyboard.press(Key.right)
             keyboard.release(Key.right)
-            print("Session swipe", n,"Hopefully a match!", "Next swipe in:", restfloat, "seconds.")
+            print("Like, session action", n,"Hopefully a match!", "Next swipe in:", restfloat, "seconds.")
             n=n+1
             time.sleep(restfloat)
 
@@ -65,7 +66,7 @@ def optimalswiperr():
 
     while True: ##loop for if elif else statement
         
-        sleepfloat=random.uniform(1.9, 2.2) ##time rest inbetween each swipe
+        sleepfloat=random.uniform(1.9, 2.2)##time rest inbetween each swipe
 
         ##sleep at day limit for 1 hour
         if counter%49000==0: 
@@ -78,10 +79,11 @@ def optimalswiperr():
         elif counter%dislike==0:
             keyboard.press(Key.left)
             keyboard.release(Key.left)
-            print("Session dislike", x,"Definitely not a bot! ;)")
+            print("Dislike. Session action", counter,"Definitely not a bot! ;)")
             x=x+1
             time.sleep(sleepfloat)
             dislike=randint(4,6)
+            counter=counter+1
 
         ##like
         else:
@@ -131,3 +133,4 @@ Label (window, text="\nLeast likely setting to result in a ban, most natural and
 Button(window, text="CalmSwiperr", width=30, command=calmswiperr) .grid(row=7, column=0, sticky=W)
 Label (window, text="\nBest mix of swiping frequently and risk of not getting banned.", bg="black", fg="orange", font="none 12 bold") .grid(row=9, column=0, sticky=W)
 Button(window, text="OptimalSwiperr", width=30, command=optimalswiperr) .grid(row=10, column=0, sticky=W)
+
