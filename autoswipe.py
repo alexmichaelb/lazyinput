@@ -6,7 +6,7 @@ import random
 from random import randint
 import threading
 
-##################################################################################
+##To be used on tinder web-app
 
 ##Autoswiper function for low chance of bot detection
 def calmswiperr():
@@ -50,7 +50,6 @@ def calmswiperr():
             n=n+1
             time.sleep(restfloat)
 
-################################################################################
 
 ##swipes the most and helps elo
 def optimalswiperr():
@@ -93,9 +92,6 @@ def optimalswiperr():
             counter=counter+1
             time.sleep(sleepfloat)
 
-    
-    
-################################################################################
 
 ##Bombs through 1800 right swipes asap. Tanks elo but produces quick results.
 def hyperswiperr():
@@ -114,12 +110,9 @@ def hyperswiperr():
             k=k+1
             print("Like number:", k)
             
-
         else:
             time.sleep(3000)
             k=0
-
-
 
 ##Constructors
 window = Tk()
